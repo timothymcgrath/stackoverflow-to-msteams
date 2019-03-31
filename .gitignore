@@ -61,4 +61,4 @@ typings/
 *.zip
 
 # Visual Studio Code settings
-*.vscode
+*.vscode/*
