@@ -1,5 +1,5 @@
 {
-  "name": "stackoverflowpoller",
+  "name": "stackoverflow-to-msteams",
   "version": "1.0.0",
   "description": "Polls StackOverflow For Teams to update Microsoft Teams channel",
   "main": "index.js",

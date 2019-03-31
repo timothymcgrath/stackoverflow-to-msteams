@@ -1,9 +1,7 @@
 var Request = require("request");
 const config = require('./config');
 
-var lastDate = Math.floor(Date.now() / 1000);
-
-setInterval(function () {
+function poll() {
 
     try {
         var options = {
@@ -81,4 +79,10 @@ setInterval(function () {
     {
 
     }
-}, 60000);
+
+    setTimeout(poll(), 60000);
+}
+
+
+var lastDate = Math.floor(Date.now() / 1000);
+poll();
