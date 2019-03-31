@@ -1,6 +1,10 @@
 var Request = require("request");
 const config = require('./config');
 
+function calculateCurrentTime() {
+    return Math.floor(Date.now() / 1000);
+}
+
 function poll() {
 
     try {
@@ -18,6 +22,7 @@ function poll() {
             (error, response, body) => {
 
                 if (error) {
+                    console.error(error);
                     return;
                 }
 
@@ -72,17 +77,17 @@ function poll() {
                         })
                 });
 
-                lastDate = Math.floor(Date.now() / 1000);
+                lastDate = calculateCurrentTime();
             })
     }
-    catch
+    catch (error)
     {
-
+        console.error(error);
     }
 
     setTimeout(poll(), 60000);
 }
 
 
-var lastDate = Math.floor(Date.now() / 1000);
+var lastDate = calculateCurrentTime();
 poll();
