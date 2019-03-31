@@ -62,3 +62,6 @@ typings/
 
 # Visual Studio Code settings
 *.vscode/*
+
+# backup of live config settings
+*config-backup.js
